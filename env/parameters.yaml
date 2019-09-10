@@ -1,0 +1,10 @@
+adminUser:
+  password: vault:stercorariidae/adminUser:password
+  username: admin
+enableDocker: false
+pipelineUser:
+  email: jx-org-bot@sharpwit.net
+  token: vault:stercorariidae/pipelineUser:token
+  username: jx-org-bot
+prow:
+  hmacToken: vault:stercorariidae/prow:hmacToken

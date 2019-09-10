@@ -1,17 +1,22 @@
 cluster:
-  clusterName: ""
-  environmentGitOwner: ""
-  project: ""
+  clusterName: stercorariidae
+  environmentGitOwner: jx-test-org-2
+  gitKind: github
+  gitName: github
+  gitServer: https://github.com
+  namespace: jx
+  project: ps-dev-201405
   provider: gke
-  zone: ""
-gitops: true
+  zone: us-central1-a
 environments:
 - key: dev
 - key: staging
 - key: production
+gitops: true
 ingress:
-  domain: ""
+  domain: 34.70.47.181.nip.io
   externalDNS: false
+  namespaceSubDomain: -jx.
   tls:
     email: ""
     enabled: false
@@ -21,13 +26,13 @@ secretStorage: vault
 storage:
   logs:
     enabled: true
-    url: ""
+    url: gs://stercorariidae-logs-3e4be595-79c1-4e04-bea1-9df6a69488a
   reports:
     enabled: true
-    url: ""
+    url: gs://stercorariidae-reports-8c6393d3-f51d-4580-9e0c-1e5f3cb2
   repository:
     enabled: true
-    url: ""
+    url: gs://stercorariidae-repository-945b03b3-5741-40a5-929a-729f1
 versionStream:
   ref: 0c3237feef3846fdfc7f17d4f5946017882414e2
   url: https://github.com/cloudbees/cloudbees-jenkins-x-versions.git
